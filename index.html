@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IMUPL - Season2</title>
+    <style>
+        body {
+            background-image: url('https://img.veenaworld.com/wp-content/uploads/2023/09/ICC-World-Cup-2023-%E2%80%93-The-Venues-You-Must-Know-About.jpg');
+            background-size: cover;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 0 auto;
+            width: 50%;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+        .result {
+            color: #444;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 20px;
+            font-size: 50px; /* Increase this value to increase the font size */
+            /*font-weight: bold;*/
+        }
+        button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+    </style>
+    <script>
+        var players = ["Abhinandan Rai","Manthan Singh","Vishvraj Sinh","Aryan D","Rishi S","Dheeraj Babu","Aditya Thukral","Deep Shah","Jagadeesh D","Aditya D","Pravin Raj","Anuj","Anant","Jai Malhotra","Deenadayalan","Madhusudhan Reddy","Nithin Kumar Singh","Manideep","Chitranjan Kumar"," V Pavan Kumar","Tagore","Samir Mandpe","Manas","Shankar","Abhishek Kumar","Mainak Paul","Rahul Kumar","Parag Bhati","Nigam Anand"," Sushant","Chitranjan Ba","Sumit Yadav","Nasir","Vamsi","Abhijay Rathee","Mohith","Nayan","Akash","Rahul","  Vishwanth","Nixon","Afsal Rahman","Mani Bharathi","Pranjal Pathak","Mohith","Tharani Dharan","Ayush Kumar","Kuldeep","Kishore","Rajeev","Naitik","Praneeth","Adwith","Jaswanth","Priyanshu"]; // Add Your Player Names Here
+
+        function selectRandomPlayer() {
+            if (players.length > 0) {
+                var randomIndex = Math.floor(Math.random() * players.length);
+                var randomPlayer = players[randomIndex];
+                players.splice(randomIndex, 1); // Remove the selected player from the array
+                document.getElementById('result').textContent = "Player Name: " + randomPlayer;
+            } else {
+                document.getElementById('result').textContent = "Auction Ended";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>IMUPL Auction</h1>
+        <button onclick="selectRandomPlayer()">Tap to reveal the player</button>
+        <p id="result" class="result"></p>
+    </div>
+</body>
+</html>
